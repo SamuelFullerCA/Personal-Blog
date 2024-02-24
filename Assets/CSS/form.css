@@ -1,0 +1,115 @@
+/* universal style */
+*{
+    background-color: #e5e8da
+    ;
+}
+
+
+header{
+    margin: 25px;
+    height: 5vh;
+    border-bottom: 5px double black;
+    
+    margin-bottom: 50px;
+
+    h1{
+        margin-left: 10px;
+    }
+}
+
+/* styles the aside text above the form */
+aside{
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+
+    h2{
+        width: fit-content;
+        margin-bottom:  0px;
+        margin-top: 0px;
+        border-bottom: 2px outset rgb(235, 214, 95);
+        /* border-radius: 10px; */
+    }
+}
+
+/* styles the form */
+.input{
+    /* text-align: center; */
+    border: 3px solid black;
+    width: 80vw;
+    height: 67vh;
+    margin: auto;
+
+    
+    label{
+        text-align: start;
+    }  
+    #form{
+        padding: 25px;
+        
+    }
+
+    #user{
+        margin-bottom: 20px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 125%;
+    }
+
+    #title{
+        margin-bottom: 20px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 125%;
+    }
+
+    #article{
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    
+       
+       
+    }
+
+
+
+
+}
+
+/* styles the sumbit button */
+.display{
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+    justify-content: center;
+    height: 45vh;
+    width: 80vw;
+
+    button{
+        font-family: monospace 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 300%;
+        margin-top: -175px;
+        width: 275px;
+        height: 275px;
+        border: 2px solid black;
+        border-radius: 100%;
+        background-image: linear-gradient(
+            rgba(255, 210, 76, 0.6) 0%,
+            rgb(202, 207, 71) 100%
+        );
+
+        /* h2{
+            Opacity: 0.9;
+            background-color: rgba(0, 79, 225, 0);
+            font-size: 300%;
+            margin-top: 150px;
+            text-align: center;
+            background-image: none;
+        } */
+    }
+}

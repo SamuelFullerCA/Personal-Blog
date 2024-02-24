@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Blog</title>
+        <meta name="description" content="Form to post blog">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./CSS/form.css">
+    </head>
+    <body>
+        <!-- //header that contains button to change light/dark mode -->
+        <header>
+            <h1>My First Blog</h1>
+        </header>
+
+        <main>
+            <!-- //form -->
+            <aside>
+                <h2>Whats on your mind?</h2>
+            </aside>
+            <section class="input">
+                <form id = "form">
+                    <label for = "user"> Username:</label><br>
+                    <input type = "text" id = "user" name = "user" placeholder="Your Username"></input><br>
+                    <label for = "title"> Title:</label><br>
+                    <input type = "text" id = "title" name = "title" placeholder="Blog Title"></input><br>
+                    <label for = "article"> Article: </label><br>
+                    <textarea id = "article" placeholder="Your Blog" rows="18"></textarea>
+                </form>
+            </section>
+
+                 <!-- //art that changes based on light/dark mode -->
+            <section class="display">
+                <button form = "form">Submit Blog</button>
+            </section>
+            
+        </main>
+    </body>
+</html>
