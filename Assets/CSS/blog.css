@@ -1,19 +1,79 @@
-/* universal stle */
-*{
-    background-color: #e5e8da
-    ;
+
+.light-mode{
+    background-color: #e5e6e3;
 }
 
 /* styles the header */
 header{
+    display: flex;
     margin: 25px;
-    height: 5vh;
+    min-height: 3vh;
     border-bottom: 5px double black;
-    
-    margin-bottom: 50px;
+    margin-bottom: 65px;
+    justify-content: end;
 
     h1{
-        margin-left: 10px;
+        width: 100vw;
+        min-width:  70vw;
+        margin-top: 0px;
+        
+    }
+
+    .switch{
+        position: relative;
+        display: flex;
+        width: 50px;
+        height: 31px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+        .slider{
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(202, 207, 71);
+            -webkit-transition: .4s;
+            transition: .4s;
+        } 
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 27px;
+            width: 27px;
+            bottom: 2px;
+            left: 1px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+
+          input:checked + .slider {
+            background-color: rgb(137, 39, 157);
+          }
+          input:focus + .slider {
+            box-shadow: 0 0 1px rgb(137, 39, 157);
+          }
+          input:checked + .slider:before {
+            -webkit-transform: translateX(21px);
+            -ms-transform: translateX(21px);
+            transform: translateX(21px);
+          }
+          .slider.round {
+            border-radius: 34px;
+          }
+          .slider.round:before {
+            border-radius: 50%;
+          }
+        
+
     }
 }
 
@@ -23,4 +83,24 @@ main{
     border-radius: 10px;
     height: 100vh;
     width: 90vw;
+}
+
+
+
+
+
+
+.dark-mode{
+    background-color: #1f1f1f;
+    
+    header{
+        border-color: rgb(72, 72, 72);
+    }
+
+    main{
+        border-color: rgb(72, 72, 72)
+    }
+    h1{
+        color: white;
+    }
 }
