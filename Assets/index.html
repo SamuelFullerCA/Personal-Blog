@@ -7,16 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./CSS/form.css">
     </head>
-    <body>
+    <body class="light-mode">
         <!-- //header that contains button to change light/dark mode -->
         <header>
             <h1>My First Blog</h1>
+            <label class="switch" >
+                <input  type="checkbox" id="switchmode">
+                <span class="slider round"></span>
+              </label>
         </header>
 
         <main>
             <!-- //form -->
             <aside>
-                <h2>Whats on your mind?</h2>
+                <h2 id="switchmode">Whats on your mind?</h2>
             </aside>
             <section class="input">
                 <form id = "form">
@@ -35,5 +39,6 @@
             </section>
             
         </main>
+        <script src="./JS/blog.js"></script>
     </body>
 </html>
