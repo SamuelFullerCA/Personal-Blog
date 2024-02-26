@@ -23,15 +23,15 @@
                 <h2>What's on your mind?</h2>
             </aside>
             <section class="input">
-                <form id = "form">
+                <form id = "form" method="get">
                     <label for = "user"> Username:</label><br>
-                    <input type = "text" id = "user" name = "user" placeholder="Your Username"></input><br>
+                    <input type = "text" id = "user" v name = "user" placeholder="Your Username"></input><br>
                     <label for = "title"> Title:</label><br>
-                    <input type = "text" id = "title" name = "title" placeholder="Blog Title"></input><br>
+                    <input type = "text" id = "title"  name = "title" placeholder="Blog Title"></input><br>
                     <label for = "article"> Article: </label><br>
-                    <textarea id = "article" placeholder="Your Blog" rows="18"></textarea>
+                    <textarea id = "article"  placeholder="Your Blog" rows="18"></textarea>
                     <section class="display">
-                        <button form = "form" >Submit Blog</button>
+                        <button id = "buttonclick" form = "form" >Submit Blog</button>
                     </section>
                 </form>
             </section>
@@ -43,5 +43,6 @@
             
         </main>
         <script src="./JS/form.js"></script>
+        <script src="./JS/logic.js"></script>
     </body>
 </html>
