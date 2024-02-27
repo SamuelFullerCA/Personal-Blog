@@ -12,6 +12,20 @@ header{
     margin-bottom: 65px;
     justify-content: end;
 
+    #return{
+      display: inline;
+      position: relative;
+      right: 150px;
+      bottom: 7px;
+      background-image: linear-gradient(
+      rgba(255, 210, 76, 0.6) 0%,
+      rgb(202, 207, 71) 100%);
+      width: 75px;
+      height: 50px;
+
+    
+    }
+
     h1{
         width: 100vw;
         min-width:  70vw;
@@ -39,6 +53,7 @@ header{
             right: 0;
             bottom: 0;
             background-color: rgb(202, 207, 71);
+            /* sliding annimation */
             -webkit-transition: .4s;
             transition: .4s;
         } 
@@ -49,8 +64,9 @@ header{
             height: 27px;
             width: 27px;
             bottom: 2px;
-            left: 1px;
+            left: 1px;  
             background-color: white;
+            /* sliding annimation */
             -webkit-transition: .4s;
             transition: .4s;
           }
@@ -62,9 +78,9 @@ header{
             box-shadow: 0 0 1px rgb(137, 39, 157);
           }
           input:checked + .slider:before {
-            -webkit-transform: translateX(21px);
-            -ms-transform: translateX(21px);
-            transform: translateX(21px);
+            -webkit-transform: translateX(17px);
+            -ms-transform: translateX(17px);
+            transform: translateX(17px);
           }
           .slider.round {
             border-radius: 34px;
@@ -81,13 +97,14 @@ main{
     margin: auto;
     border: 3px solid black;
     border-radius: 10px;
-    height: 100vh;
+    height: fit-content;
     width: 90vw;
 
     article{
       margin: auto;
       padding-left: 15px;
       margin-top: 15px;
+      margin-bottom: 15px;
       max-height: fit-content;
       max-width: 80vw;
       border: 3px solid black;
@@ -100,7 +117,7 @@ main{
       }
 
       p{
-        font-size: 150%
+        font-size: 125%
       };
 
       h3{
@@ -122,6 +139,14 @@ main{
         border-color: rgb(72, 72, 72);
     }
 
+    #return{
+    color: white;
+    background-image: linear-gradient(
+        rgba(71, 13, 67, 0.6) 0%,
+        rgb(137, 39, 157) 100%)
+    }
+
+
     main{
         border-color: rgb(72, 72, 72)
     }
@@ -134,19 +159,16 @@ main{
       border-radius: 5px;
 
       h2{
-        font-size: 200%;
         width: fit-content;
         border-bottom: 3px solid rgb(137, 39, 157);
         color: white;
       }
 
       p{
-        font-size: 150%;
         color: white;
       };
 
       h3{
-        font-size: 75%;
         color: #1f1f1f;
         color: white;
       };
