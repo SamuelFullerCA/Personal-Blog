@@ -41,7 +41,7 @@ returns.addEventListener('click', function(){
 
 
 
-// object of the data not sure if i need this
+// array for all blogpost data
 let blogsarray = []
 
 
@@ -52,31 +52,55 @@ const blogdata = {
 }  
 test = JSON.parse(localStorage.getItem(`blogs`))
 
+
+
+
+let ha = "hahahahahhah popped"
+
+
+    // saves all blogs
     do{
+        // creates the initial post and stores it in local storage,
+        //then does a repeat check of all adition posts before storing them
         if (test === null){
             blogsarray.push(blogdata)
             window.localStorage.setItem('blogs', JSON.stringify(blogsarray))
-            console.log(blogsarray)
-        } else {
+            console.log("initial post")
+            break;
+        } else{
+            //idk how i managed but this section stops a page reresh 
+            //from reposting the last blog in the array
+            blogsarray = JSON.parse(localStorage.getItem(`blogs`))
+            console.log(blogsarray.length)
+            if(blogsarray.length >= 1){
+                const blogindexrepeat = blogsarray[blogsarray.length -1]
+                console.log(blogindexrepeat)
+                repeatcontentinput = blogindexrepeat['content'];
+                if (blogdata['content'] === repeatcontentinput){
+                    console.log(ha)
+                    break;
+                    }
+                }
+            // collects the array of blogs, adds the new blog, and stores the array with new blog
             blogsarray = JSON.parse(localStorage.getItem(`blogs`))
             blogsarray.push(blogdata) 
             window.localStorage.setItem('blogs', JSON.stringify(blogsarray))
-            console.log(blogsarray)
+            console.log('after initial post')
+            break;
         }
+
+
+
+
     }while((blogsarray === null))
 
-ha = "hahahahha"
 
 
-//function that creates a blogpost
-
+//for loop that creates all the posts
 for (i = 0; i < blogsarray.length; i++) {
 
-    console.log(blogsarray.length)
 
-   
-
-
+  
 
 
 
@@ -84,9 +108,24 @@ for (i = 0; i < blogsarray.length; i++) {
     const blogindex = blogsarray[i]
 
 
-    userinput = blogindex['usernme'];
+    userinput = blogindex['username'];
     titleinput = blogindex['title'];
     contentinput = blogindex['content'];
+
+    // if(i !== 0){
+    //     const blogindexrepeat = blogsarray[i - 1]
+    //     console.log(blogindexrepeat)
+    //     repeatcontentinput = blogindexrepeat['content'];
+    //     if (blogdata['content'] === repeatcontentinput){
+    //          console.log(ha)
+    //         blogsarray.pop()
+    //         console.log(blogsarray)
+    //         break;
+    //     }
+        
+    // }
+
+
 
 
     const post = document.createElement('article')
@@ -121,234 +160,6 @@ for (i = 0; i < blogsarray.length; i++) {
     document.querySelector(`.article${i}`).appendChild(postcontent)
     document.querySelector(`.article${i}`).appendChild(postuser)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// initial()
-// // storeblogs()
-
-
-
-// console.log(blogsarray)
-
-// function initial() {
-    
-//     do{
-//         if (blogsarray === null){
-//             blogsarray = blogdata
-//             window.localStorage.setItem('blogs', JSON.stringify(blogsarray))
-//             break
-//         } else {
-//             blogsarray = JSON.parse(localStorage.getItem(`blogs`)) 
-//             break;
-//     }
-//     }while((blogsarray === null))
-
-// }
-
-
-// console.log(blogsarray)
-
-
-// //function that creates a blogpost
-// function postblog(){
-//     let userdirect = window.localStorage.getItem("username")
-//     let titledirect = window.localStorage.getItem("title")
-//     let contentdirect = window.localStorage.getItem("content")
-
-//     const post = document.createElement('article')
-//     document.querySelector('#newblog').appendChild(post)
-//     post.setAttribute('class', 'titleclass');
-
-
-//     if (titledirect !== null){
-//         posttitle = document.createElement('h2')
-//         posttitle.textContent = `${titledirect}`;
-//         document.querySelector('.titleclass').appendChild(posttitle)
-//     } else{
-//     }
-
-//     if (contentdirect !== null){
-//         postcontent = document.createElement('p')
-//         postcontent.textContent = `${contentdirect}`;
-//         document.querySelector('.titleclass').appendChild(postcontent)
-//     } else{
-//     }
-
-//     if (userdirect !== null){
-//         postuser = document.createElement('h3')
-//         postuser.textContent = `Blog written by: ${userdirect}`;
-//         document.querySelector('.titleclass').appendChild(postuser)
-        
-//     }else {
-//     }
-    
-//     document.querySelector('#newblog').appendChild(post)
-//     document.querySelector('.titleclass').appendChild(posttitle)
-//     document.querySelector('.titleclass').appendChild(postcontent)
-//     document.querySelector('.titleclass').appendChild(postuser)
-// }
-
-
-
-// function storeblogs() {
-//     blogsarray.push(blogdata)
-//     window.localStorage.setItem('blogs', JSON.stringify(blogsarray))
-// }
-
-
-
-
-
-
-
-
-
-
-
-// const newblog = document.querySelector('#newblog');
-
-
-// function renderblogs() {
-//     newblog.innerHTML = '';
-//     for (let i =  0; i < blogs.length; i++) {
-//         const blog = blogs[i]
-
-//         const article = document.createElement('article');
-//         article.textContent = blog;
-//         blog.appendChild(article)
-
-//     }
-
-
-
-// }
-
-
-//     renderblogs()
-// }
-
-
-
-
-// const blogpost = blogdata;
-
-//   if (blogpost === '') {
-//   }
-  
-//   blogs.push(blogpost);
-//   todoInput.value = '';
-
-
-//   storeblogs();
-//   renderblogs();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// do{
-//     let username = window.localStorage.getItem("username")
-//     let title = window.localStorage.getItem("title")
-//     let content = window.localStorage.getItem("content")
-
-//     const post = document.createElement('article')
-//     // document.querySelector('#newblog').appendChild(post)
-//     post.setAttribute('class', 'titleclass');
-
-
-//     if (title !== null){
-//         posttitle = document.createElement('h2')
-//         posttitle.textContent = `${title}`;
-//         // document.querySelector('.titleclass').appendChild(posttitle)
-//     } else{
-//         break;
-//     }
-
-//     if (content !== null){
-//         postcontent = document.createElement('p')
-//         postcontent.textContent = `${content}`;
-//         // document.querySelector('.titleclass').appendChild(postcontent)
-//     } else{
-//         break;
-//     }
-
-//     if (username !== null){
-//         postuser = document.createElement('h3')
-//         postuser.textContent = `Blog written by: ${username}`;
-//         // document.querySelector('.titleclass').appendChild(postuser)
-        
-//     }else {
-//         break;
-//     }
-    
-//     document.querySelector('#newblog').appendChild(post)
-//     document.querySelector('.titleclass').appendChild(posttitle)
-//     document.querySelector('.titleclass').appendChild(postcontent)
-//     document.querySelector('.titleclass').appendChild(postuser)
-//     break;
-
-// }while (true)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
