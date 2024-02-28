@@ -1,4 +1,4 @@
-/* body element style */
+/* sets default backround color for page on light mode */
 .light-mode{
     background-color: #e5e6e3;
 }
@@ -19,16 +19,25 @@ header{
         margin-top: 0px;
         
     }
+    /* button to go to blog page */
+    #toblog{
+        display: inline;
+        position: relative;
+        right: 150px;
+        bottom: 7px;
+        background-image: linear-gradient(
+        rgba(255, 210, 76, 0.6) 0%,
+        rgb(202, 207, 71) 100%);
+        width: 75px;
+        height: 50px;
+      }
 
+    /* all controls for the darkmode-lightmode toggle switch */
     .switch{
         position: relative;
         display: flex;
         width: 50px;
         height: 31px;
-        
-        /* margin-left: 100px; */
-        /* left: 1700px;
-        bottom: 50px; */
 
         input {
             opacity: 0;
@@ -56,29 +65,38 @@ header{
             bottom: 2px;
             left: 1px;
             background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
+            /* sliding annimation removed as it always shows 
+            when trasitioning between pages or refreshing*/
+            /* -webkit-transition: .4s;
+             transition: .4s; */
           }
 
+          /* changes color when toggled */
           input:checked + .slider {
             background-color: rgb(137, 39, 157);
           }
+          
           input:focus + .slider {
             box-shadow: 0 0 1px rgb(137, 39, 157);
           }
+
+          /* moves the position of the white circle 
+          (moves the slider without animation) */
           input:checked + .slider:before {
             -webkit-transform: translateX(17px);
             -ms-transform: translateX(17px);
             transform: translateX(17px);
           }
+
+          /* sets the slider to round instead of a box */
           .slider.round {
             border-radius: 34px;
           }
+
+          /* sets the circle inside the slider to round instead of box */
           .slider.round:before {
             border-radius: 50%;
           }
-        
-
     }
 }
 
@@ -107,7 +125,6 @@ aside{
     /* height: 67vh; */
     margin: auto;
 
-    
     label{
         text-align: start;
     }  
@@ -138,17 +155,8 @@ aside{
     font-size: 125%;
     width: 100%;
     height: 100%;
-    
-       
-       
     }
-
-
-
-
 }
-
-/* how to stop button from moving */
 /* styles the sumbit button */
 .display{
     display: flex;
@@ -181,10 +189,13 @@ aside{
     }
 }
 
-/* all dark mode changes */
+
+
+
+/* all dark mode attribute changes are stored here */
 .dark-mode{
     background-color: #1f1f1f;
-    
+
     header{
         border-color: rgb(72, 72, 72);
     }
@@ -198,6 +209,13 @@ aside{
     h2{
         color: white;
         border-color: rgb(137, 39, 157);
+    }
+
+    #toblog{
+        color: white;
+        background-image: linear-gradient(
+            rgba(71, 13, 67, 0.6) 0%,
+            rgb(137, 39, 157) 100%)
     }
 
     button{
@@ -233,11 +251,4 @@ aside{
 }
 
 
-/* @media(max-width: 700px){
 
-    button{
-        font-size: 100%;
-        max-width: 150px;
-        max-height: 150px;
-    }
-} */

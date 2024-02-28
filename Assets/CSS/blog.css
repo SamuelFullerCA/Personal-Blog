@@ -1,4 +1,5 @@
 
+/* sets default backround color for page on light mode */
 .light-mode{
     background-color: #e5e6e3;
 }
@@ -22,17 +23,15 @@ header{
       rgb(202, 207, 71) 100%);
       width: 75px;
       height: 50px;
-
-    
     }
 
     h1{
         width: 100vw;
         min-width:  70vw;
         margin-top: 0px;
-        
     }
 
+    /* all controls for the darkmode-lightmode toggle switch */
     .switch{
         position: relative;
         display: flex;
@@ -66,9 +65,10 @@ header{
             bottom: 2px;
             left: 1px;  
             background-color: white;
-            /* sliding annimation */
-            -webkit-transition: .4s;
-            transition: .4s;
+            /* sliding annimation removed as it shows 
+            when trasitioning between pages*/
+            /* -webkit-transition: .4s; */
+            /* transition: .4s; */
           }
 
           input:checked + .slider {
@@ -88,19 +88,18 @@ header{
           .slider.round:before {
             border-radius: 50%;
           }
-        
-
     }
 }
 
+/* styles the main section with blogs */
 main{
-    margin: auto;
-    border: 3px solid black;
-    border-radius: 10px;
-    height: fit-content;
-    width: 90vw;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 10px;
+  height: fit-content;
+  width: 90vw;
 
-    article{
+  article{
       margin: auto;
       padding-left: 15px;
       margin-top: 15px;
@@ -111,27 +110,29 @@ main{
       border-radius: 5px;
 
       h2{
-        font-size: 200%;
+        font-size: 215%;
         width: fit-content;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid rgb(236, 212, 53)
       }
 
       p{
-        font-size: 125%
+        font-size: 135%;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        padding-right: 5px;
       };
 
       h3{
         font-size: 75%;
         color: #1f1f1f
       };
-    } ;
+  } ;
 }
 
 
 
 
-
-
+/* all dark mode attribute changes are stored here */
 .dark-mode{
     background-color: #1f1f1f;
     
@@ -145,7 +146,6 @@ main{
         rgba(71, 13, 67, 0.6) 0%,
         rgb(137, 39, 157) 100%)
     }
-
 
     main{
         border-color: rgb(72, 72, 72)
