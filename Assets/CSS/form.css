@@ -56,8 +56,8 @@ header{
             right: 0;
             bottom: 0;
             background-color: rgb(202, 207, 71);
-            -webkit-transition: .4s;
-            transition: .4s;
+            -webkit-transition: .04s;
+            transition: .04s;
         } 
         
         .slider:before {
@@ -70,8 +70,8 @@ header{
             background-color: white;
             /* sliding annimation removed as it always shows 
             when trasitioning between pages or refreshing*/
-            /* -webkit-transition: .4s;
-             transition: .4s; */
+            /* -webkit-transition: .04s; */
+            /* transition: .04s; */
           }
 
           /* changes color when toggled */
@@ -86,9 +86,9 @@ header{
           /* moves the position of the white circle 
           (moves the slider without animation) */
           input:checked + .slider:before {
-            -webkit-transform: translateX(17px);
-            -ms-transform: translateX(17px);
-            transform: translateX(17px);
+            -webkit-transform: translateX(16px);
+            -ms-transform: translateX(16px);
+            transform: translateX(16px);
           }
 
           /* sets the slider to round instead of a box */
