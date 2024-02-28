@@ -27,7 +27,6 @@ do{
         } else{
             //idk how I managed but this section stops a page reresh from reposting the last blog in the array
             blogsarray = JSON.parse(localStorage.getItem(`blogs`))
-            console.log(blogsarray.length)
             if(blogsarray.length >= 1){
                 const blogindexrepeat = blogsarray[blogsarray.length -1]
                 console.log(blogindexrepeat)
@@ -63,14 +62,12 @@ for (i = 0; i < blogsarray.length; i++) {
         posttitle = document.createElement('h2')
         posttitle.textContent = `${titleinput}`;
         document.querySelector(`.article${i}`).appendChild(posttitle)
-    } else{
     }
 
     if (blogindex !== null){
         postcontent = document.createElement('p')
         postcontent.textContent = `${contentinput}`;
         document.querySelector(`.article${i}`).appendChild(postcontent)
-    } else{
     }
 
     if (blogindex !== null){
@@ -78,7 +75,6 @@ for (i = 0; i < blogsarray.length; i++) {
         postuser.textContent = `Blog written by: ${userinput}`;
         document.querySelector(`.article${i}`).appendChild(postuser)
         
-    }else {
     }
     
     document.querySelector('#newblog').appendChild(post)
@@ -87,5 +83,21 @@ for (i = 0; i < blogsarray.length; i++) {
     document.querySelector(`.article${i}`).appendChild(postuser)
 }
 
+// function to copy email on click
+const copyemail = document.querySelector('#email')
+copyemail.addEventListener('click', function(){
+    let copytext = "samuelfullerca@gmail.com"
+    navigator.clipboard.writeText(copytext);
+    alert("Email copied to clipboard!")
+})
 
 
+
+
+
+
+
+
+
+
+  

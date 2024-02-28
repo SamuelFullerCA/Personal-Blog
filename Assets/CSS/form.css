@@ -26,11 +26,14 @@ header{
         right: 150px;
         bottom: 7px;
         background-image: linear-gradient(
-        rgba(255, 210, 76, 0.6) 0%,
-        rgb(202, 207, 71) 100%);
+            rgb(237, 169, 22) 0%,
+            rgb(237, 247, 91) 100%);
         width: 75px;
         height: 50px;
-      }
+    }
+    button:hover{
+        border-color: rgb(3, 191, 19);
+    }
 
     /* all controls for the darkmode-lightmode toggle switch */
     .switch{
@@ -174,19 +177,14 @@ aside{
         border: 2px solid black;
         border-radius: 100%;
         background-image: linear-gradient(
-            rgba(255, 210, 76, 0.6) 0%,
-            rgb(202, 207, 71) 100%
+            rgb(237, 169, 22) 0%,
+            rgb(237, 247, 91) 100%
         );
-
-        /* h2{
-            Opacity: 0.9;
-            background-color: rgba(0, 79, 225, 0);
-            font-size: 300%;
-            margin-top: 150px;
-            text-align: center;
-            background-image: none;
-        } */
     }
+    button:hover{
+        border-color: rgb(3, 191, 19);
+    }
+
 }
 
 

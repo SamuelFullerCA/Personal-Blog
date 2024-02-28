@@ -19,10 +19,14 @@ header{
       right: 150px;
       bottom: 7px;
       background-image: linear-gradient(
-      rgba(255, 210, 76, 0.6) 0%,
-      rgb(202, 207, 71) 100%);
+         rgb(237, 169, 22) 0%,
+         rgb(237, 247, 91) 100%);
       width: 75px;
       height: 50px;
+    }
+
+    button:hover{
+      border-color: rgb(3, 191, 19);
     }
 
     h1{
@@ -112,7 +116,8 @@ main{
       h2{
         font-size: 215%;
         width: fit-content;
-        border-bottom: 3px solid rgb(236, 212, 53)
+        border-bottom: 3px solid rgb(236, 212, 53);
+        margin-top: 3px
       }
 
       p{
@@ -129,6 +134,33 @@ main{
   } ;
 }
 
+/* styles the footer section */
+footer{
+  text-align: center;
+  a:visited { text-decoration: none; color: black }
+  a:hover { text-decoration: none; color: black; }
+  a:focus { text-decoration: none; color: black; }    
+  a:hover, a:active { text-decoration: none; color: black; }
+
+  h4{
+    width: 95vw;
+    font-size: 150%;
+
+  }
+  ul{
+    text-align: center;
+    list-style-type: none;
+    width: 90vw;
+
+    li{
+      display: inline;
+      flex-wrap: wrap;
+      padding: 15px;
+      font-size: 150%;
+      text-decoration: underline;
+    }
+  }
+}
 
 
 
@@ -172,5 +204,13 @@ main{
         color: #1f1f1f;
         color: white;
       };
-    } ;
+    }
+
+      footer{
+        color: white;
+        a:visited {text-decoration: none; color: white};
+        a:hover {text-decoration: none; color: white};
+        a:focus {text-decoration: none; color: white};  
+        a:hover, a:active {text-decoration: none; color: white};
+      } ;
 }

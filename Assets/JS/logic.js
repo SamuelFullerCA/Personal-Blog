@@ -30,3 +30,9 @@ switcher.addEventListener ('click', function(){
         document.body.setAttribute('class', 'light-mode');
     }
 });
+
+
+
+
+
+
